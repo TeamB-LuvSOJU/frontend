@@ -63,25 +63,25 @@ function Content({ i, data }) {
         </div>
       </div>
       <div className="mt-2 grid w-full grid-cols-4 justify-between gap-2">
-        <img
+      <img
           src={sampleImage1}
           alt="sampleImage1"
-          className="rounded-lg"
+          className="h-24 w-36 rounded-lg object-cover object-center"
         />
         <img
           src={sampleImage2}
           alt="sampleImage2"
-          className="rounded-lg"
+          className="h-24 w-36 rounded-lg object-cover object-center"
         />
         <img
           src={sampleImage3}
           alt="sampleImage3"
-          className="rounded-lg"
+          className="h-24 w-36 rounded-lg object-cover object-center"
         />
         <img
           src={sampleImage4}
           alt="sampleImage4"
-          className="rounded-lg"
+          className="h-24 w-36 rounded-lg object-cover object-center"
         />
       </div>
     </div>

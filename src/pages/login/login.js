@@ -1,16 +1,13 @@
-import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import LoginContainer from "../../components/LoginContainer"
+import Header from "../../components/Header";
+import LoginContainer from "../../components/LoginContainer";
 
-function login(){
-    return(
-        <div className="flex flex-col items-center justify-center">
-            <Header />
-            <LoginContainer />
-            <Footer />
-        </div>
-    )
+const Login = () => (
+  <>
+    <Header />
+    <LoginContainer />
+    <Footer />
+  </>
+);
 
-}
-
-export default login;
+export default Login;
