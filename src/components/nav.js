@@ -12,7 +12,7 @@ function valuetext(value) {
 const minDistance = 1000;
 
 function Nav() {
-  const [value1, setValue1] = useState([4000, 8000]);
+  const [value1, setValue1] = useState([3000, 8000]);
 
   const handleChange1 = (event, newValue, activeThumb) => {
     console.log(newValue);
@@ -28,12 +28,13 @@ function Nav() {
   };
 
   return (
-    <div className="mt-7 flex w-full items-center justify-between pb-3 pl-7">
-      <div className="flex h-12 items-start">
-        <span className="mr-3 mt-[2px] flex text-lg font-medium text-[#302f2f]">
+    <div className="mt-7 flex w-full flex-wrap items-center justify-between pb-3 pl-7">
+      {/* Bundle 1: Soju Price */}
+      <div className="flex h-12 min-w-[200px] items-start">
+        <span className="mr-3 mt-[2px] flex items-center text-lg font-medium text-[#302f2f]">
           소주 가격
         </span>
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-shrink-0 flex-col items-center justify-center">
           <Box className="flex w-[24rem]">
             <Slider
               sx={{
@@ -82,7 +83,7 @@ function Nav() {
               onChange={handleChange1}
               getAriaValueText={valuetext}
               disableSwap
-              min={4000}
+              min={3000}
               max={8000}
               step={1000}
             />
@@ -93,7 +94,9 @@ function Nav() {
           </div>
         </div>
       </div>
-      <div className="flex items-center space-x-2">
+
+      {/* Bundle 2: AI and Category */}
+      <div className="flex flex-shrink-0 items-center space-x-2">
         <div className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-[#5a5a5a] hover:cursor-pointer">
           <span className="font-semibold text-[#5a5a5a]">AI</span>
         </div>

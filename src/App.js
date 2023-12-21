@@ -9,12 +9,9 @@ import Detail from "./pages/detail/detail";
 import Login from "./pages/login/login";
 import SignUp from "./pages/signup/signup";
 import Mypage from "./pages/mypage/mypage";
-
+import Aipage from "./pages/aipage/aipage";
 
 function App() {
-
-
-
   return (
     <div className="App">
       <div className="mx-auto my-0 h-full min-w-[320px] max-w-[640px]">
@@ -24,6 +21,7 @@ function App() {
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/signup" element={<SignUp></SignUp>}></Route>
           <Route path="/mypage" element={<Mypage></Mypage>}></Route>
+          <Route path="/aipage" element={<Aipage></Aipage>}></Route>
         </Routes>
       </div>
     </div>
