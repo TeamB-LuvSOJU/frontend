@@ -10,6 +10,7 @@ import Login from "./pages/login/login";
 import SignUp from "./pages/signup/signup";
 import Mypage from "./pages/mypage/mypage";
 import Aipage from "./pages/aipage/aipage";
+import Menu from "./pages/menu/menu";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/signup" element={<SignUp></SignUp>}></Route>
           <Route path="/mypage" element={<Mypage></Mypage>}></Route>
           <Route path="/aipage" element={<Aipage></Aipage>}></Route>
+          <Route path="/menu" element={<Menu></Menu>}></Route>
         </Routes>
       </div>
     </div>
