@@ -85,7 +85,11 @@ function AiContainer() {
       {/* AI 검색을 마쳤을 때 */}
       {aiState === "Done" && (
         <div className="mt-4 flex h-96 w-full flex-col items-center justify-center space-y-5 bg-white ">
-          <img src={uploadedImage} alt="ramen" className="w-80" />
+          <img
+            src={uploadedImage}
+            alt="ramen"
+            className="h-[150px] w-[300px]"
+          />
           <span className="tracking-wider">
             '라멘' '일식'과 관련된 추천 가게입니다.
           </span>
