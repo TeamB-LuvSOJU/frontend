@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-expressions */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import category from "../assets/category.svg";
@@ -12,6 +13,8 @@ function valuetext(value) {
 const minDistance = 1000;
 
 function Nav() {
+  const navigate = useNavigate();
+
   const [value1, setValue1] = useState([3000, 8000]);
 
   const handleChange1 = (event, newValue, activeThumb) => {
@@ -97,13 +100,21 @@ function Nav() {
 
       {/* Bundle 2: AI and Category */}
       <div className="flex flex-shrink-0 items-center space-x-2">
-        <div className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-[#5a5a5a] hover:cursor-pointer">
+        <div
+          className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-[#5a5a5a] hover:cursor-pointer"
+          onClick={() => {
+            navigate("/aipage");
+          }}
+        >
           <span className="font-semibold text-[#5a5a5a]">AI</span>
         </div>
         <img
           src={category}
           alt="category"
           className="w-11 hover:cursor-pointer"
+          onClick={() => {
+            navigate("/menu");
+          }}
         />
       </div>
     </div>
