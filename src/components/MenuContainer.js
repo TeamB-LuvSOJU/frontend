@@ -16,7 +16,7 @@ const categories = {
 };
 
 function MenuContainer() {
-  const [value1, setValue1] = useState([3000, 8000]);
+  const [value1, setValue1] = useState([4000, 9000]);
 
   const handleChange1 = (event, newValue, activeThumb) => {
     if (!Array.isArray(newValue)) {
@@ -31,29 +31,60 @@ function MenuContainer() {
   };
 
   return (
-    <div className="mt-5 flex w-full flex-col items-center bg-[#F9F9F9] p-7">
+    <div className="mt-5 flex w-full flex-col items-center bg-[#F9F9F9] p-10">
       {/* 지역 박스 */}
-      <div className="mb-4">
-        <span className="text-xl font-semibold">지역</span>
-        {categories.region.map((item) => (
-          <div key={item} className=" justify-betwee* ml-2 flex">
-            <span>{item}</span>
-          </div>
-        ))}
+      <div className="mb-12 flex w-full flex-col justify-start">
+        <span className="mb-3 flex text-xl font-semibold">지역</span>
+        <div className="grid grid-cols-3 gap-x-10 gap-y-6">
+          <span className="hover:cursor-pointer">{categories.region[0]}</span>
+          <span
+            className="line-through hover:cursor-pointer"
+            onClick={() => {
+              alert("아직 개발중입니다.");
+            }}
+          >
+            {categories.region[1]}
+          </span>
+          <span
+            className="line-through hover:cursor-pointer"
+            onClick={() => {
+              alert("아직 개발중입니다.");
+            }}
+          >
+            {categories.region[2]}
+          </span>
+          <span
+            className="line-through hover:cursor-pointer"
+            onClick={() => {
+              alert("아직 개발중입니다.");
+            }}
+          >
+            {categories.region[3]}
+          </span>
+        </div>
       </div>
       {/* 기타 박스 */}
-      <div className="mb-4">
-        <span className="text-xl font-semibold">기타</span>
-        {categories.etc.map((item) => (
-          <div key={item} className="ml-2">
-            <span>{item}</span>
-          </div>
-        ))}
+      <div className="mb-12 flex w-full flex-col justify-start">
+        <span className="mb-3 flex text-xl font-semibold">기타</span>
+        <div className="grid grid-cols-3 gap-x-10 gap-y-6">
+          <span className="hover:cursor-pointer">{categories.etc[0]}</span>
+          <span className="hover:cursor-pointer">{categories.etc[1]}</span>
+          <span className="hover:cursor-pointer">{categories.etc[2]}</span>
+          <span className="hover:cursor-pointer">{categories.etc[3]}</span>
+          <span
+            className="line-through hover:cursor-pointer"
+            onClick={() => {
+              alert("아직 개발중입니다.");
+            }}
+          >
+            {categories.etc[4]}
+          </span>
+        </div>
       </div>
       {/* 맥주 박스 */}
-      <div>
-        <span className="text-xl font-semibold">맥주 가격</span>
-        <div className="flex flex-shrink-0 flex-col items-center justify-center">
+      <div className="mb-4 flex w-full flex-col justify-start">
+        <span className="mb-3 flex text-xl font-semibold">맥주 가격</span>
+        <div className="flex flex-col items-center justify-center">
           <Box className="flex w-[24rem]">
             <Slider
               sx={{
@@ -102,8 +133,8 @@ function MenuContainer() {
               onChange={handleChange1}
               getAriaValueText={valuetext}
               disableSwap
-              min={3000}
-              max={8000}
+              min={4000}
+              max={9000}
               step={1000}
             />
           </Box>

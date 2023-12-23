@@ -9,7 +9,7 @@ function SearchModal({ onCancelClick }) {
       onClick={onCancelClick}
     >
       <div
-        className="transfor absolute left-1/2 top-6 flex h-10 w-96 -translate-x-1/2 items-center justify-start rounded-3xl bg-[#ffffff]"
+        className="absolute left-1/2 top-6 flex h-10 w-96 -translate-x-1/2 transform items-center justify-start rounded-3xl bg-[#ffffff]"
         onClick={handleContainerClick}
       >
         <input
