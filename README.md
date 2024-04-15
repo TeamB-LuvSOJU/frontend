@@ -29,7 +29,7 @@
 
 ```
 - Frontend: React, Recoil, Tailwind, kakaomap api
-- Backend : Spring-boot
+- Backend : Spring-boot, JPA, Gradle
 - Database: AWS RDS MySQL
 - AI : Flask, Pytorch, Google vision api
 - API Test : Postman
